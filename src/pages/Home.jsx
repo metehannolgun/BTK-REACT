@@ -4,11 +4,6 @@ import { NavLink } from 'react-router'
 const Home = () => {
   return (
    <div>
-<nav>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/about'>About</NavLink>
-        <NavLink to='/courses'>Courses</NavLink>
-    </nav>
      
         <h1>Home</h1>
         <p>

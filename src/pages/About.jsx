@@ -4,13 +4,9 @@ import { NavLink } from 'react-router'
 const About = () => {
   return (
     <div>
-      <nav>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/about'>About</NavLink>
-        <NavLink to='/courses'>Courses</NavLink>
-    </nav>
+      
      
-        <h1>About</h1>
+        <h2>About</h2>
         <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi aliquid autem. 
         Voluptatibus exercitationem vitae quis aut sequi, inventore ea vero, aliquam cumque corrupti veniam, 
