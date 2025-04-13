@@ -1,19 +1,33 @@
 import React from 'react'
-import { NavLink } from 'react-router'
+import { useLoaderData } from 'react-router'
 
 const Courses = () => {
+  const courses = useLoaderData()
   return (
-    <div>
-     
-     
-        <h1>Courses</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi aliquid autem. 
-            Voluptatibus exercitationem vitae quis aut sequi, inventore ea vero, aliquam cumque corrupti veniam, 
-            omnis culpa quaerat earum atque. Aliquid cumque tempore perspiciatis eligendi, temporibus animi veniam explicabo eos.
-        </p>
-    </div>
+    <>
+      <h1>Courses</h1>
+      <div className='container-2'>
+        {courses.map((item) => (
+          <div className='card' key={item.id}>
+            <img src={`http://localhost:5000/images/${item.image}`} alt='' />
+            <div>
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+              <a href='$'>Detay</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   )
+}
+
+export async function coursesLoader() {
+  const res = await fetch('http://localhost:5000/courses')
+  if (!res.ok) {
+    throw new Error('Failed to fetch courses')
+  }
+  return res.json()
 }
 
 export default Courses

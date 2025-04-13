@@ -3,10 +3,10 @@ import { NavLink } from 'react-router'
 
 const About = () => {
   return (
-    <div>
+    <div className='container-2'>
       
      
-        <h2>About</h2>
+        <h1>About</h1>
         <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi aliquid autem. 
         Voluptatibus exercitationem vitae quis aut sequi, inventore ea vero, aliquam cumque corrupti veniam, 
